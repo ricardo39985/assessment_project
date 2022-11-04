@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="w-[60%] mx-auto ">
+    <h1 class="text-6xl text-center font-bold mt-20 mb-4">Add A Wshlist Item</h1>
+    <div class="w-[60%] bg-gray-400 h-[2px] mx-auto"></div>
+    <div class="flex justify-center">
+
+
+    <form action={% url 'create' %} method="post">
+        {% csrf_token %}
+        <div class="">
+            <div>
+                <label class="text-3xl text-gray-500" for="des">Description:</label><br>
+                <textarea class= "outline" name="description" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class=" mx-auto flex justify-center">
+                <button class = "bg-gray-200 p-4 text-xl my-2"type="submit">Add Item</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+{% endblock content %}
